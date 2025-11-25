@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings — Interactive Reveal.js</title>
+
+  <!-- Reveal.js CSS (theme + core) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/solarized.css" id="theme">
+
+  <!-- Highlight.js for code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github.min.css">
+
+  <style>
+    /* Small adjustments for a professional look */
+    .reveal .slides section h1{font-size:2.2rem}
+    .email {font-size:0.9rem; opacity:0.85}
+    pre.hljs { max-height: 360px; overflow:auto; }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- --- Title slide --- -->
+      <section>
+        <h1>Q3 2025 Quarterly Earnings</h1>
+        <p class="email">Prepared by: Technical Consulting — <strong>23f2000764@ds.study.iitm.ac.in</strong></p>
+        <p>Interactive report showcasing modern presentation capabilities (Reveal.js)</p>
+        <aside class="notes">Open with a short greeting and call out that the deck is interactive — use arrow keys to step through fragments.</aside>
+      </section>
+
+      <!-- --- Markdown slide (uses Reveal's markdown plugin) --- -->
+      <section data-markdown>
+        <script type="text/template">
+
+## Executive Summary
+
+- Revenue grew **6.4% QoQ** (fragment)
+- Net margin improved due to operational efficiency (fragment)
+- Guidance unchanged for FY2025 (fragment)
+
+> *Quick note:* The following slides contain animated fragments, code samples, formulas and speaker notes.
+
+        </script>
+        <aside class="notes">When presenting this slide, pause on each fragment and give one-line commentary about revenue, margin, and guidance.</aside>
+      </section>
+
+      <!-- --- Slide with animated fragments --- -->
+      <section>
+        <h2>Key Drivers</h2>
+        <ul>
+          <li class="fragment" data-fragment-index="1">Higher transaction volumes</li>
+          <li class="fragment" data-fragment-index="2">Cost containment in Ops</li>
+          <li class="fragment" data-fragment-index="3">FX tailwinds</li>
+        </ul>
+        <aside class="notes">Use these fragments to walk the audience through the drivers one at a time. Mention any specific region if asked.</aside>
+      </section>
+
+      <!-- --- Slide with code sample & syntax highlighting --- -->
+      <section>
+        <h2>Example: Simple Revenue Growth Calculation (Python)</h2>
+        <pre><code class="language-python"># revenue_growth.py
+old_revenue = 1_200_000
+new_revenue = 1_276_800
+growth_pct = (new_revenue - old_revenue) / old_revenue * 100
+print(f"Revenue growth: {growth_pct:.2f}%")</code></pre>
+        <aside class="notes">Explain this snippet briefly — it's a simple, auditable computation. Mention to stakeholders that these calculations are reproducible.</aside>
+      </section>
+
+      <!-- --- Slide with mathematical equations (LaTeX via MathJax) --- -->
+      <section>
+        <h2>Financial Formulae</h2>
+        <p>Net Present Value (NPV):</p>
+        <p>\[ \mathrm{NPV} = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t} \]</p>
+
+        <p>Return on Invested Capital (ROIC):</p>
+        <p>\[ \mathrm{ROIC} = \frac{\mathrm{NOPAT}}{\mathrm{Invested\ Capital}} \times 100\% \]</p>
+
+        <aside class="notes">Call out assumptions behind discount rate r and show how sensitivity to r changes NPV. Offer to show a sensitivity table on request.</aside>
+      </section>
+
+      <!-- --- Slide with combined content and fragments showing an analysis table (simple HTML table) --- -->
+      <section>
+        <h2>Quarterly Snapshot</h2>
+        <table>
+          <thead>
+            <tr><th>Metric</th><th>Q2 2025</th><th>Q3 2025</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Revenue</td><td>$1.20M</td><td class="fragment" data-fragment-index="1">$1.277M</td></tr>
+            <tr><td>Net Income</td><td>$120k</td><td class="fragment" data-fragment-index="2">$140k</td></tr>
+            <tr><td>ROIC</td><td>8.2%</td><td class="fragment" data-fragment-index="3">8.9%</td></tr>
+          </tbody>
+        </table>
+        <aside class="notes">Highlight the revenue and margin improvements as fragments appear; mention drivers and one-off items if any.</aside>
+      </section>
+
+      <!-- --- Closing slide --- -->
+      <section>
+        <h2>Questions & Next Steps</h2>
+        <p>Please send follow-up queries to <strong>23f2000764@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">Invite questions and offer a follow-up appendix with detailed reconciliations.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core + plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js"></script>
+
+  <!-- Highlight.js -->
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/common/index.min.js"></script>
+
+  <!-- MathJax (for LaTeX rendering) -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    // Initialize Reveal
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealNotes, RevealMath ],
+      math: {
+        // math plugin passes config to MathJax
+        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+      },
+      transition: 'slide',
+      slideNumber: true,
+      // enable highlight.js autoloader
+      dependencies: [
+        { src: 'https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/common/index.min.js', async: true, callback: function() { hljs.highlightAll(); } }
+      ]
+    });
+  </script>
+
+</body>
+</html>
