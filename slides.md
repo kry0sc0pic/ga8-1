@@ -73,7 +73,7 @@ strong {
 <!-- Use any public URL or local relative image -->
 ---
 marp: true
-backgroundImage: url("https://picsum.photos/1920/1080?blur=3")
+backgroundImage: url("https://cdn-front.freepik.com/images/ai/image-generator/cover/image-generator-header.webp?w=3840&h=1920&q=90%203840w,%20https://cdn-front.freepik.com/images/ai/image-generator/cover/image-generator-header.webp?w=7680&h=3840&q=90%207680w")
 backgroundSize: cover
 class: lead
 ---
