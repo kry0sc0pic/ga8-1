@@ -80,6 +80,21 @@ A modern platform enabling secure, scalable, and real-time data acquisition for 
 
 ---
 
+<!-- _backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920') -->
+<!-- _backgroundSize: cover -->
+<!-- _color: white -->
+
+# Edge Computing Revolution
+
+## Transforming Data at the Edge
+
+Bringing intelligence closer to the source for:
+- **Lower Latency**
+- **Enhanced Privacy**
+- **Reduced Bandwidth**
+
+---
+
 ## Algorithmic Complexity
 
 The core streaming scheduler uses a balanced queue strategy.
