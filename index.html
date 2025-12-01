@@ -1,142 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quarterly Earnings — Interactive Reveal.js</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Q4 Earnings Report - Interactive RevealJS Presentation</title>
 
-  <!-- Reveal.js CSS (theme + core) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/solarized.css" id="theme">
+    <!-- Core RevealJS styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
+    />
+    <!-- Theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css"
+      id="theme"
+    />
 
-  <!-- Highlight.js for code syntax highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github.min.css">
+    <!-- Highlight.js theme for code -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
+    />
 
-  <style>
-    /* Small adjustments for a professional look */
-    .reveal .slides section h1{font-size:2.2rem}
-    .email {font-size:0.9rem; opacity:0.85}
-    pre.hljs { max-height: 360px; overflow:auto; }
-  </style>
-</head>
-<body>
+    <style>
+      /* Simple branding + layout tweaks */
+      .reveal {
+        font-family: "Arial", sans-serif;
+      }
 
-  <div class="reveal">
-    <div class="slides">
+      .slide-footer {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-size: 0.5em;
+        opacity: 0.7;
+      }
 
-      <!-- --- Title slide --- -->
-      <section>
-        <h1>Q3 2025 Quarterly Earnings</h1>
-        <p class="email">Prepared by: Technical Consulting — <strong>23f2000764@ds.study.iitm.ac.in</strong></p>
-        <p>Interactive report showcasing modern presentation capabilities (Reveal.js)</p>
-        <aside class="notes">Open with a short greeting and call out that the deck is interactive — use arrow keys to step through fragments.</aside>
-      </section>
+      .kpi {
+        font-size: 1.4em;
+        font-weight: bold;
+      }
 
-      <!-- --- Markdown slide (uses Reveal's markdown plugin) --- -->
-      <section data-markdown>
-        <script type="text/template">
+      .chart-placeholder {
+        width: 100%;
+        height: 400px;
+        border: 2px dashed #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: italic;
+      }
+    </style>
+  </head>
 
-## Executive Summary
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- TITLE SLIDE -->
+        <section>
+          <h1>Q4 Earnings Report</h1>
+          <h3>Interactive Financial Overview</h3>
+          <p>Prepared by: Technical Consultant</p>
+          <p>
+            Contact:
+            <strong>23f2000764@ds.study.iitm.ac.in</strong>
+          </p>
+          <div class="slide-footer">
+            Q4 Earnings &mdash; RevealJS Interactive Deck
+          </div>
 
-- Revenue grew **6.4% QoQ** (fragment)
-- Net margin improved due to operational efficiency (fragment)
-- Guidance unchanged for FY2025 (fragment)
+          <aside class="notes">
+            Welcome stakeholders, highlight that this is a live, interactive
+            presentation with code, math, and charts. Mention that the deck is
+            hosted on GitHub Pages for easy sharing and version control.
+          </aside>
+        </section>
 
-> *Quick note:* The following slides contain animated fragments, code samples, formulas and speaker notes.
+        <!-- MARKDOWN SLIDE (REQUIRED) -->
+        <section data-markdown>
+          <textarea data-template>
+## Executive Summary (Markdown Slide)
 
-        </script>
-        <aside class="notes">When presenting this slide, pause on each fragment and give one-line commentary about revenue, margin, and guidance.</aside>
-      </section>
+- **Revenue**: $3.2B (▲ 8% YoY)
+- **Net Income**: $540M (▲ 5% YoY)
+- **EPS (Diluted)**: \$3.45
+- **Cost-to-Income Ratio**: 52%
 
-      <!-- --- Slide with animated fragments --- -->
-      <section>
-        <h2>Key Drivers</h2>
-        <ul>
-          <li class="fragment" data-fragment-index="1">Higher transaction volumes</li>
-          <li class="fragment" data-fragment-index="2">Cost containment in Ops</li>
-          <li class="fragment" data-fragment-index="3">FX tailwinds</li>
-        </ul>
-        <aside class="notes">Use these fragments to walk the audience through the drivers one at a time. Mention any specific region if asked.</aside>
-      </section>
+---
 
-      <!-- --- Slide with code sample & syntax highlighting --- -->
-      <section>
-        <h2>Example: Simple Revenue Growth Calculation (Python)</h2>
-        <pre><code class="language-python"># revenue_growth.py
-old_revenue = 1_200_000
-new_revenue = 1_276_800
-growth_pct = (new_revenue - old_revenue) / old_revenue * 100
-print(f"Revenue growth: {growth_pct:.2f}%")</code></pre>
-        <aside class="notes">Explain this snippet briefly — it's a simple, auditable computation. Mention to stakeholders that these calculations are reproducible.</aside>
-      </section>
+### Key Drivers
 
-      <!-- --- Slide with mathematical equations (LaTeX via MathJax) --- -->
-      <section>
-        <h2>Financial Formulae</h2>
-        <p>Net Present Value (NPV):</p>
-        <p>\[ \mathrm{NPV} = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t} \]</p>
+- Loan book expansion in retail and SME segments
+- Improved **net interest margin (NIM)**
+- Tight control on operating expenses
+- Continued investment in **digital channels**
 
-        <p>Return on Invested Capital (ROIC):</p>
-        <p>\[ \mathrm{ROIC} = \frac{\mathrm{NOPAT}}{\mathrm{Invested\ Capital}} \times 100\% \]</p>
+*Note: All values are unaudited and for internal review only.*
+          </textarea>
 
-        <aside class="notes">Call out assumptions behind discount rate r and show how sensitivity to r changes NPV. Offer to show a sensitivity table on request.</aside>
-      </section>
+          <aside class="notes">
+            Call out the year-on-year growth and mention that the following
+            slides will drill into revenue by segment, margin analysis, and
+            capital adequacy. Emphasize that this slide is authored in Markdown
+            for easier maintenance in Git.
+          </aside>
+        </section>
 
-      <!-- --- Slide with combined content and fragments showing an analysis table (simple HTML table) --- -->
-      <section>
-        <h2>Quarterly Snapshot</h2>
-        <table>
-          <thead>
-            <tr><th>Metric</th><th>Q2 2025</th><th>Q3 2025</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Revenue</td><td>$1.20M</td><td class="fragment" data-fragment-index="1">$1.277M</td></tr>
-            <tr><td>Net Income</td><td>$120k</td><td class="fragment" data-fragment-index="2">$140k</td></tr>
-            <tr><td>ROIC</td><td>8.2%</td><td class="fragment" data-fragment-index="3">8.9%</td></tr>
-          </tbody>
-        </table>
-        <aside class="notes">Highlight the revenue and margin improvements as fragments appear; mention drivers and one-off items if any.</aside>
-      </section>
+        <!-- FRAGMENTS & ANIMATIONS -->
+        <section>
+          <h2>Revenue Breakdown by Segment</h2>
+          <ul>
+            <li class="fragment">
+              <strong>Retail Banking:</strong> 45% of total revenue
+            </li>
+            <li class="fragment">
+              <strong>Corporate &amp; Investment Banking:</strong> 35%
+            </li>
+            <li class="fragment">
+              <strong>Wealth &amp; Asset Management:</strong> 15%
+            </li>
+            <li class="fragment fade-up">
+              <strong>Other Income (FX, fees, &amp; trading):</strong> 5%
+            </li>
+          </ul>
 
-      <!-- --- Closing slide --- -->
-      <section>
-        <h2>Questions & Next Steps</h2>
-        <p>Please send follow-up queries to <strong>23f2000764@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">Invite questions and offer a follow-up appendix with detailed reconciliations.</aside>
-      </section>
+          <div class="slide-footer">
+            Press <code>&rarr;</code> to reveal segments one by one.
+          </div>
 
+          <aside class="notes">
+            Use the fragment progression to keep the audience focused on each
+            segment. Pause on the wealth &amp; asset management growth to
+            explain strategic initiatives and cross-selling.
+          </aside>
+        </section>
+
+        <!-- INTERACTIVE CHART PLACEHOLDER -->
+        <section id="revenue-slide">
+          <h2>Interactive Revenue Trend (Last 8 Quarters)</h2>
+          <div id="revenue-chart" class="chart-placeholder">
+            Revenue chart will render here on slide load
+          </div>
+
+          <aside class="notes">
+            Explain that this chart can be wired to live or near-real-time data.
+            For the demo, we use static sample data. In production, this could
+            pull from an internal API or data lake.
+          </aside>
+        </section>
+
+        <!-- CODE SAMPLE WITH SYNTAX HIGHLIGHTING -->
+        <section>
+          <h2>EPS Calculation (Sample Code)</h2>
+          <pre><code class="language-python" data-trim data-line-numbers="1-4|6-10">
+import pandas as pd
+
+# Quarterly income statement snapshot
+df = pd.DataFrame({
+    "net_income": [510_000_000, 540_000_000],
+    "shares_outstanding": [150_000_000, 156_000_000]
+}, index=["Q3", "Q4"])
+
+def compute_eps(row):
+    return row["net_income"] / row["shares_outstanding"]
+
+df["eps"] = df.apply(compute_eps, axis=1)
+
+print(df[["eps"]])
+          </code></pre>
+
+          <aside class="notes">
+            Walk through how EPS is computed programmatically. Emphasize that
+            this is illustrative and that production calculations must align
+            with accounting policies and disclosures.
+          </aside>
+        </section>
+
+        <!-- MATH SLIDE (FINANCIAL FORMULAS) -->
+        <section>
+          <h2>Key Financial Formulas</h2>
+
+          <p class="kpi fragment">
+            Return on Equity (ROE):
+            \[
+              \text{ROE} = \frac{\text{Net Income}}{\text{Average Shareholders'
+              Equity}}
+            \]
+          </p>
+
+          <p class="fragment">
+            Net Interest Margin (NIM):
+            \[
+              \text{NIM} = \frac{\text{Interest Income} - \text{Interest
+              Expense}}{\text{Average Earning Assets}}
+            \]
+          </p>
+
+          <p class="fragment">
+            Cost-to-Income Ratio:
+            \[
+              \text{C/I} = \frac{\text{Operating Expenses}}{\text{Operating
+              Income}}
+            \]
+          </p>
+
+          <aside class="notes">
+            Keep the audience aligned on the core metrics. Explain the intuition
+            behind each formula, especially ROE and NIM, as they are central to
+            the bank's performance narrative.
+          </aside>
+        </section>
+
+        <!-- RISK & CAPITAL (FRAGMENTS + MATH) -->
+        <section>
+          <h2>Capital Adequacy &amp; Risk-Weighted Assets</h2>
+
+          <p class="fragment">
+            Capital Adequacy Ratio (CAR):
+            \[
+              \text{CAR} = \frac{\text{Tier 1 Capital} + \text{Tier 2 Capital}}{\text{Risk-Weighted Assets}}
+            \]
+          </p>
+
+          <ul>
+            <li class="fragment">
+              Tier 1 Ratio: <strong>13.2%</strong> (▲ 40 bps QoQ)
+            </li>
+            <li class="fragment">
+              Total CAR: <strong>16.5%</strong> vs regulatory minimum of 11.5%
+            </li>
+            <li class="fragment fade-up">
+              Headroom for growth in retail and SME portfolios
+            </li>
+          </ul>
+
+          <aside class="notes">
+            Emphasize that the bank is well capitalized. Connect CAR to growth
+            capacity and regulatory comfort. If asked, show how RWA optimization
+            impacts these ratios.
+          </aside>
+        </section>
+
+        <!-- GITHUB PAGES PUBLISHING SLIDE -->
+        <section data-markdown>
+          <textarea data-template>
+## Deployment on GitHub Pages
+
+1. **Repository Setup**
+   - Create a public repo, e.g. `quarterly-earnings-slides`
+   - Add this `index.html` file at the repository root
+   - Commit and push to GitHub
+
+2. **Enable GitHub Pages**
+   - Go to **Settings → Pages**
+   - **Source**: select `Deploy from a branch`
+   - **Branch**: choose `main` and root (`/`)
+   - Save and wait for deployment
+
+3. **Share the Deck**
+   - Your presentation will be available at:
+
+     `https://&lt;your-username&gt;.github.io/quarterly-earnings-slides/`
+
+   - Share the URL with stakeholders for remote access
+          </textarea>
+
+          <aside class="notes">
+            Mention that GitHub Pages gives versioned, auditable history of the
+            deck. Changes to the narrative, numbers, and code are all tracked
+            and reviewable via pull requests.
+          </aside>
+        </section>
+
+        <!-- CONTROLS & SHORTCUTS -->
+        <section>
+          <h2>Presenter Controls &amp; Shortcuts</h2>
+          <ul>
+            <li class="fragment"><strong>F</strong> &mdash; Fullscreen</li>
+            <li class="fragment"><strong>S</strong> &mdash; Speaker notes</li>
+            <li class="fragment"><strong>O</strong> / <strong>ESC</strong> &mdash; Overview</li>
+            <li class="fragment"><strong>B</strong> / <strong>.</strong> &mdash; Pause (black/blank)</li>
+            <li class="fragment">Use <strong>← →</strong> and <strong>↑ ↓</strong> to navigate</li>
+          </ul>
+
+          <aside class="notes">
+            Use this as a quick reminder before going into the live demo. Ensure
+            that the speaker notes window is open on your laptop during the
+            actual earnings call.
+          </aside>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <!-- Reveal.js core + plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js"></script>
+    <!-- RevealJS core -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
 
-  <!-- Highlight.js -->
-  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/common/index.min.js"></script>
+    <!-- Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
-  <!-- MathJax (for LaTeX rendering) -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      // Initialize RevealJS
+      Reveal.initialize({
+        hash: true,
+        width: 1280,
+        height: 720,
+        margin: 0.04,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: "slide",
+        plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes],
+        math: {
+          // Default MathJax/KaTeX config is fine for our formulas
+        },
+      });
 
-  <script>
-    // Initialize Reveal
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealNotes, RevealMath ],
-      math: {
-        // math plugin passes config to MathJax
-        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
-      },
-      transition: 'slide',
-      slideNumber: true,
-      // enable highlight.js autoloader
-      dependencies: [
-        { src: 'https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/common/index.min.js', async: true, callback: function() { hljs.highlightAll(); } }
-      ]
-    });
-  </script>
+      // Simple placeholder for an "interactive" revenue chart
+      const sampleRevenue = [2.8, 2.9, 3.0, 3.1, 3.2]; // in billions
+      function renderRevenueChart() {
+        const el = document.getElementById("revenue-chart");
+        if (!el || el.dataset.rendered) return;
 
-</body>
+        el.dataset.rendered = "true";
+        el.innerHTML =
+          "<div>Sample revenue data (last 5 quarters): " +
+          sampleRevenue.join("B, ") +
+          "B</div>";
+      }
+
+      Reveal.addEventListener("slidechanged", function (event) {
+        if (event.currentSlide && event.currentSlide.id === "revenue-slide") {
+          renderRevenueChart();
+        }
+      });
+    </script>
+  </body>
 </html>
