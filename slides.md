@@ -1,102 +1,133 @@
 ---
 marp: true
-title: Product Documentation Presentation
-theme: custom-tech
+title: Product Documentation — SmartEdge Platform
+author: Krishaay Jois
 paginate: true
-footer: "© 2025 Software Documentation | Contact: 23f2000764@ds.study.iitm.ac.in"
-math: katex
+theme: default
 ---
 
+<!-- Custom Theme Overrides -->
 <style>
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap";
-
-/* Custom Marp Theme */
 section {
+  background: #fafafa;
   font-family: "Inter", sans-serif;
-  background-color: #f7f9fc;
-  color: #1e1e1e;
-  padding: 40px;
 }
-
-h1, h2, h3 {
-  font-weight: 600;
-  color: #0d47a1;
+h1, h2 {
+  color: #0044aa;
 }
-
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #0044aa;
+  padding-left: 10px;
+}
 footer {
-  font-size: 12px;
-  color: #444;
-}
-
-strong {
-  color: #0d47a1;
+  font-size: 14px;
+  opacity: 0.6;
 }
 </style>
 
-# 🧩 Product Documentation  
-### Using Marp for Maintainable, Versioned Docs  
-**Author:** 23f2000764@ds.study.iitm.ac.in
+# SmartEdge Platform  
+### Technical Documentation
+
+**Author:** Krishaay Jois  
+📧 *23f2000764@ds.study.iitm.ac.in*
 
 ---
 
-## Why Marp for Documentation?
+<!-- _class: lead -->
+<!-- _backgroundColor: #0044aa -->
+<!-- _color: white -->
 
-- Markdown-based → easy to version control  
-- Export formats: **PDF, HTML, PPTX**  
-- Developer-friendly workflow  
-- Lightweight and automatable in CI/CD  
+# What is SmartEdge?
 
----
-
-## Workflow Features
-
-- Single source of truth (`.md`)
-- Custom themes  
-- Automated builds using Marp CLI  
-- Supports images, math, diagrams, and more
+A modern platform enabling secure, scalable, and real-time data acquisition for edge AI workflows.
 
 ---
 
----
-backgroundImage: url("https://picsum.photos/1600/900")
-backgroundSize: cover
-class: lead
+## Architecture Overview
+
+![width:550px](images/architecture-diagram.png)
+
+- Modular firmware
+- Secure MQTT streaming
+- OTA update support
+- Kubernetes-compatible services
+
 ---
 
-# 🌐 Background Image Example  
-## This slide uses a full-slide background image.
+## Key Features
+
+- 🚀 Fast deployment
+- 🔐 Secure authentication
+- 📦 Modular extensions
+- 📊 Real-time analytics
+
+> "Designed for performance, built for scale."
+
+---
+
+<!-- _backgroundImage: url('images/bg-tech.jpg') -->
+<!-- _backgroundSize: cover -->
+<!-- _color: white -->
+
+# System Requirements
+
+| Component | Minimum | Recommended |
+|----------|---------|-------------|
+| RAM | 2 GB | 4 GB+ |
+| Storage | 8 GB | 32 GB SSD |
+| OS | Linux / macOS | Linux (Ubuntu 22.04+) |
 
 ---
 
 ## Algorithmic Complexity
 
-The indexing algorithm runs in:
+The core streaming scheduler uses a balanced queue strategy.
 
-\[
-T(n) = O(n \log n)
-\]
+### Example:
 
-Traversal complexity:
+Inline: `O(log n)` priority insert
 
-\[
-T_{\text{dfs}} = O(V + E)
-\]
+Block:
 
----
-
-## Styled Callout
-
-<div style="padding: 15px; border-left: 6px solid #0d47a1; background:#e3f2fd;">
-  <strong>Note:</strong> Documentation auto-builds nightly from the repository.
-</div>
+$$
+T(n) = O(\log n) + O(1) = O(\log n)
+$$
 
 ---
 
-## Code Example
+## Code Sample
 
 ```python
-def process_document(doc):
-    tokens = tokenize(doc)
-    index = build_index(tokens)
-    return index
+def connect(device_id):
+    print(f"🔗 Connecting {device_id} to SmartEdge...")
+
+connect("EdgeNode-001")
 ```
+
+---
+
+<!-- _header: SmartEdge Platform -->
+<!-- _footer: © 2025 SmartEdge Systems -->
+
+## Deployment Steps
+
+1. Clone the repository  
+2. Configure `.env`  
+3. Run:
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## Contact & Support
+
+📧 **23f2000764@ds.study.iitm.ac.in**  
+🌐 Documentation: coming soon  
+🐛 Issue Tracker: submit via GitHub
+
+---
+
+# Thank You 🙌
