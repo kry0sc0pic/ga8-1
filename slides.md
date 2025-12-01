@@ -66,7 +66,7 @@ A modern platform enabling secure, scalable, and real-time data acquisition for 
 
 ---
 
-<!-- _backgroundImage: url('images/bg-tech.jpg') -->
+_backgroundImage: url('images/bg-tech.jpg')
 <!-- _backgroundSize: cover -->
 <!-- _color: white -->
 
